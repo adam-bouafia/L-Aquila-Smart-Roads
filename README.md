@@ -80,12 +80,14 @@ The application allows performing the following operations:
 
 ## Technical Architecture
 
-<img src="![Architecture](https://github.com/user-attachments/assets/f8b540df-cbed-4c57-be93-ac56e04d43b4)
+<img src="![Architecture](https://github.com/user-attachments/assets/f93f0b69-af53-4741-aa9a-cc6d76366021)
+
 ">
 
 ## Class Diagram 
 
-<img src="![Class Diagram](https://github.com/user-attachments/assets/7e8cdf9b-a1ef-448e-9eb7-de027f98d2ec)
+<img src="![Class Diagram](https://github.com/user-attachments/assets/48e3bd84-9ae0-4ce9-9365-5a07a27f4704)
+
 " width="70%">
 
 ## Backend Services
