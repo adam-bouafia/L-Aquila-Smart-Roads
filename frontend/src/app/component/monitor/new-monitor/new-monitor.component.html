@@ -1,0 +1,227 @@
+<!--
+This HTML file represents the template for the "New Monitor" component. It contains a form for adding a new monitor with general information such as monitor name, max speed, longitude, and latitude.
+
+The form is bound to the "monitorFormGroup" FormGroup object, and the form submission is handled by the "handleAddMonitor()" method.
+
+The input fields for monitor name, max speed, longitude, and latitude have validation applied using Angular's form validation. The validation messages are displayed based on the form control's errors and touched state.
+
+The "Save all" button is disabled if the form is invalid.
+
+Note: The file path mentioned above is just an example and may vary based on the actual file location.
+-->
+<div class="d-flex align-items-center m-2">
+  <h4><b>New Monitor</b></h4>
+</div>
+
+<div class="row m-5">
+  <div class="col-16 col-xl-10">
+    <div class="card card-body border-0 shadow mb-4">
+      <h2 class="h5 mb-4">General information</h2>
+      <form [formGroup]="monitorFormGroup" (ngSubmit)="handleAddMonitor()">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="usernameValidate">Monitor Name</label>
+            <input
+              type="text"
+              placeholder="Monitor name"
+              [ngClass]="
+                monitorFormGroup.controls['name'].errors &&
+                monitorFormGroup.controls['name'].touched == true
+                  ? 'form-control is-invalid'
+                  : 'form-control is-valid'
+              "
+              id="usernameValidate"
+              formControlName="name"
+              required
+            />
+            <div
+              [ngClass]="
+                monitorFormGroup.controls['name'].errors &&
+                monitorFormGroup.controls['name'].touched == true
+                  ? 'invalid-feedback'
+                  : 'valid-feedback'
+              "
+            >
+              <p
+                *ngIf="
+                  monitorFormGroup.controls['name'].errors &&
+                  monitorFormGroup.controls['name'].touched
+                "
+              >
+                {{
+                  monitorService.getErrorMessage(
+                    "Name",
+                    monitorFormGroup.controls["name"].errors
+                  )
+                }}
+              </p>
+              <p
+                *ngIf="
+                  !monitorFormGroup.controls['name'].errors &&
+                  monitorFormGroup.controls['name'].touched
+                "
+              >
+                Looks Good !
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="usernameValidate">Max Speed</label>
+            <input
+              type="text"
+              placeholder="Monitor name"
+              [ngClass]="
+                monitorFormGroup.controls['maxSpeed'].errors &&
+                monitorFormGroup.controls['maxSpeed'].touched == true
+                  ? 'form-control is-invalid'
+                  : 'form-control is-valid'
+              "
+              id="usernameValidate"
+              formControlName="maxSpeed"
+              required
+            />
+            <div
+              [ngClass]="
+                monitorFormGroup.controls['maxSpeed'].errors &&
+                monitorFormGroup.controls['maxSpeed'].touched == true
+                  ? 'invalid-feedback'
+                  : 'valid-feedback'
+              "
+            >
+              <p
+                *ngIf="
+                  monitorFormGroup.controls['maxSpeed'].errors &&
+                  monitorFormGroup.controls['maxSpeed'].touched
+                "
+              >
+                {{
+                  monitorService.getErrorMessage(
+                    "Max Speed ",
+                    monitorFormGroup.controls["maxSpeed"].errors
+                  )
+                }}
+              </p>
+              <p
+                *ngIf="
+                  !monitorFormGroup.controls['maxSpeed'].errors &&
+                  monitorFormGroup.controls['maxSpeed'].touched
+                "
+              >
+                Looks Good !
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <div>
+              <label>Longitude</label>
+              <input
+                class="form-control"
+                formControlName="longitude"
+                type="text"
+                [ngClass]="
+                  monitorFormGroup.controls['longitude'].errors &&
+                  monitorFormGroup.controls['longitude'].touched == true
+                    ? 'form-control is-invalid'
+                    : 'form-control is-valid'
+                "
+                placeholder="Monitor longitude"
+                required
+              />
+              <div
+                [ngClass]="
+                  monitorFormGroup.controls['longitude'].errors &&
+                  monitorFormGroup.controls['longitude'].touched == true
+                    ? 'invalid-feedback'
+                    : 'valid-feedback'
+                "
+              >
+                <p
+                  *ngIf="
+                    monitorFormGroup.controls['longitude'].errors &&
+                    monitorFormGroup.controls['longitude'].touched
+                  "
+                >
+                  {{
+                    monitorService.getErrorMessage(
+                      "Longitude",
+                      monitorFormGroup.controls["longitude"].errors
+                    )
+                  }}
+                </p>
+                <p
+                  *ngIf="
+                    !monitorFormGroup.controls['longitude'].errors &&
+                    monitorFormGroup.controls['longitude'].touched
+                  "
+                >
+                  Looks Good !
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div>
+              <label>Latitude</label>
+              <input
+                class="form-control"
+                formControlName="latitude"
+                [ngClass]="
+                  monitorFormGroup.controls['latitude'].errors &&
+                  monitorFormGroup.controls['latitude'].touched == true
+                    ? 'form-control is-invalid'
+                    : 'form-control is-valid'
+                "
+                type="text"
+                placeholder="Monitor latitude"
+                required
+              />
+              <div
+                [ngClass]="
+                  monitorFormGroup.controls['latitude'].errors &&
+                  monitorFormGroup.controls['latitude'].touched == true
+                    ? 'invalid-feedback'
+                    : 'valid-feedback'
+                "
+              >
+                <p
+                  *ngIf="
+                    monitorFormGroup.controls['latitude'].errors &&
+                    monitorFormGroup.controls['latitude'].touched
+                  "
+                >
+                  {{
+                    monitorService.getErrorMessage(
+                      "Latitude",
+                      monitorFormGroup.controls["latitude"].errors
+                    )
+                  }}
+                </p>
+                <p
+                  *ngIf="
+                    !monitorFormGroup.controls['latitude'].errors &&
+                    monitorFormGroup.controls['latitude'].touched
+                  "
+                >
+                  Looks Good !
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-3">
+          <button
+            [disabled]="this.monitorFormGroup.invalid"
+            class="btn btn-gray-800 mt-2 animate-up-2"
+            type="submit"
+          >
+            Save all
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

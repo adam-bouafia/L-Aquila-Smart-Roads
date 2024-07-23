@@ -1,0 +1,18 @@
+syntax = "proto3";
+option java_package = "univaq.disim.sose.monitorservice.web.grpc.stubs";
+
+import "google/protobuf/empty.proto";
+
+message SpeedViolation {
+  string monitorId = 1;
+  string vehicleRegistrationNumber = 2;
+  int32 vehicleSpeed = 3;
+}
+
+message GenerateSpeedViolationRequest {
+  int32 numberOfViolations = 1;
+}
+
+service MonitorService {
+  rpc GenerateSpeedViolations(GenerateSpeedViolationRequest) returns (stream SpeedViolation);
+}

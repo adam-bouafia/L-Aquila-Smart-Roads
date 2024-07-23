@@ -1,0 +1,55 @@
+// Add proto compiler plugin to pom.xml file
+// Use the following commands to compile the proto file:
+// mvn validate
+// mvn package
+
+syntax = "proto3";
+
+// Specify the Java package for the generated classes
+option java_package = "univaq.disim.sose.vehiculeservice.web.grpc.stub";
+
+// Import the Timestamp proto definition from Google's protobuf library
+import "google/protobuf/timestamp.proto";
+
+// Define the Owner message
+message Owner {
+  int64 id = 1;                            // Unique identifier for the owner
+  string name = 2;                         // Name of the owner
+  google.protobuf.Timestamp birthDate = 3; // Birth date of the owner
+  string email = 4;                        // Email address of the owner
+}
+
+// Define the OwnerGrpcService service with three RPC methods
+service OwnerGrpcService {
+  rpc getOwner(GetOwnerRequest) returns (GetOwnerResponse);      // RPC method to get a single owner by ID
+  rpc listOwners(GetAllOwnersRequest) returns (GetAllOwnersResponse); // RPC method to list all owners
+  rpc saveOwner(SaveOwnerRequest) returns (SaveOwnerResponse);   // RPC method to save an owner
+}
+
+// Define the GetOwnerRequest message
+message GetOwnerRequest {
+  int64 id = 1; // ID of the owner to retrieve
+}
+
+// Define the GetOwnerResponse message
+message GetOwnerResponse {
+  Owner owner = 1; // The owner retrieved by the getOwner RPC method
+}
+
+// Define the GetAllOwnersRequest message (empty message)
+message GetAllOwnersRequest {}
+
+// Define the GetAllOwnersResponse message
+message GetAllOwnersResponse {
+  repeated Owner owners = 1; // List of owners retrieved by the listOwners RPC method
+}
+
+// Define the SaveOwnerRequest message
+message SaveOwnerRequest {
+  Owner owner = 1; // The owner to be saved
+}
+
+// Define the SaveOwnerResponse message
+message SaveOwnerResponse {
+  Owner owner = 1; // The owner that was saved
+}

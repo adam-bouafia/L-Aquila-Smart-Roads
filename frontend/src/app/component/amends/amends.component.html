@@ -1,0 +1,157 @@
+<!-- 
+This HTML template represents the UI for displaying a list of amends. It includes a table with columns for amend details such as date, vehicle owner, amount, and payment status. It also provides options to show the amend receipt and download a PDF version of the amend. Additionally, it includes a pagination component for navigating through the list of amends. 
+
+The template also includes a section for displaying additional information about a selected vehicle and monitor, which is shown when the 'isVehicleInfoVisible' flag is set to true.
+
+Note: This code snippet is part of a larger Angular component and may require additional code and dependencies to function properly.
+-->
+<div class="d-flex align-items-center m-2">
+  <h4><b>All Amends</b></h4>
+</div>
+
+<ng-template #errors>
+  <!-- Error message template -->
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <span class="fas fa-bullhorn me-1"></span>
+    <strong>{{ errMessage }}</strong>
+    <button type="button" class="btn-close btn-sm" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+</ng-template>
+
+<!-- Table -->
+<div class="row" *ngIf="amends; else errors">
+  <div class="col-12 col-xl-8">
+    <div class="row">
+      <div class="col-12 mb-4">
+        <div class="card border-0 shadow">
+          <div class="card-header">
+            <div class="row align-items-center">
+              <div class="col">
+                <h2 class="fs-5 fw-bold mb-0">Amends</h2>
+              </div>
+              <!--<div class="col text-end"><a href="#" class="btn btn-sm btn-primary">Add Vehicle</a></div>-->
+            </div>
+          </div>
+          <div class="table-responsive">
+            <!-- Amends table -->
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th class="border-bottom" scope="col">#</th>
+                  <th class="border-bottom" scope="col">Date</th>
+                  <th class="border-bottom" scope="col">Vehicle Owner</th>
+                  <th class="border-bottom" scope="col">Amount</th>
+                  <th class="border-bottom" scope="col">Paid</th>
+                  <th class="border-bottom" scope="col">Amends Receipt</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Iterate over amends and display each row -->
+                <tr *ngFor="let i of amends">
+                  <td>{{i.id}}</td>
+                  <td>{{i.date | date:'yy-MM-dd  [HH:mm:ss]' }}</td>
+                  <!--<td>{{i.vehicleMatricule| slice:0:8 }}</td>-->
+                  <td>{{i.vehicle.owner.name}}</td>
+                  <td>{{i.amendAmount}}</td>
+                  <td>
+                    <!-- Display payment status with appropriate icon -->
+                    <button (click)="handleSetPayed(i)" [disabled]="i.paid" class="btn btn-sm">
+                      <span *ngIf="i.paid== true">✅</span>
+                      <span *ngIf="i.paid == false">❌</span>
+                    </button>
+                  </td>
+                  <td>
+                    <!-- Show amend receipt and download PDF options -->
+                    <a (click)="showAmend(i)" data-bs-toggle="tooltip" title="Show Amend Receipt">
+                      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0,0,256,256"
+                        style="fill:#0e8c11;">
+                        <!-- SVG icon code -->
+                      </svg>
+                    </a>
+                    <a (click)="generatePDF(i)" data-bs-toggle="tooltip" title="Download PDF">
+                      <span class="sidebar-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0,0,256,256"
+                          style="fill:#000000;">
+                          <!-- SVG icon code -->
+                        </svg>
+                      </span>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- Pagination component -->
+            <nav aria-label="Page navigation example" class="m-3">
+              <ul class="pagination pagination-sm">
+                <li class="page-item">
+                  <a class="page-link" aria-label="Previous" (click)="previousPage()">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <p class="page-link">Page {{ currentPage + 1 }} of {{ totalPages }}</p>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" aria-label="Next" (click)="nextPage()">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-xl-4" *ngIf="isVehicleInfoVisible">
+    <!-- Additional vehicle and monitor information -->
+    <div class="col-12 px-0 mb-4">
+      <div class="card border-0 shadow">
+        <div class="card-header d-flex flex-row align-items-center flex-0 border-bottom">
+          <div class="d-block">
+            <div class="h4 fw-normal mb-2 "><b>Vehicle Informations</b></div>
+            <h2 class="h6  text-success">
+              <b>{{selectedVehicleAmend.registrationNumber| slice:0:8 }} </b>
+            </h2>
+            id : <b> {{selectedVehicleAmend.id}} </b> <br/>
+            <b class="text-danger">Brand : </b> {{selectedVehicleAmend.brand}} <br/>
+            <b class="text-danger">Model : </b> {{selectedVehicleAmend.model}}<br/>
+            <b class="text-danger">Fiscal Power : </b> {{selectedVehicleAmend.fiscalPower}}<br/>
+          </div>
+        </div>
+        <div class="card-body p-2 m-2">
+          <div class="h6">
+            <div class="h5 fw-normal mb-2 "><b>Owner </b></div>
+            <h4 class="h6  text-success">
+              <b>{{selectedVehicleAmend.owner.name}}  </b>
+            </h4>
+            id : <b> {{selectedVehicleAmend.owner.id}} </b> <br/>
+            <b class="text-danger">Birth Date : </b> {{selectedVehicleAmend.owner.birthDate| date:'yyyy-MM-dd' }} <br/>
+            <b class="text-danger">Email : </b> {{selectedVehicleAmend.owner.email}}<br/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 px-0 mb-4">
+      <div class="card border-0 shadow">
+        <div class="card-header d-flex flex-row align-items-center flex-0 border-bottom">
+          <div class="d-block">
+            <div class="h4 fw-normal mb-2 "><b>Monitor Informations</b></div>
+            <h2 class="h6 m-2 text-success">
+              <b> {{selectedMonitorAmend.name}} </b>
+            </h2>
+          </div>
+        </div>
+        <div class="card-body p-2 m-2">
+          <div class="h6">
+            <b>  </b>
+            id : <b> {{selectedMonitorAmend.id}} </b> <br/>
+            <b class="text-danger">Max Speed : </b> {{selectedMonitorAmend.maxSpeed}} <br/>
+            <b class="text-danger">Longitude : </b> {{selectedMonitorAmend.longitude}}<br/>
+            <b class="text-danger">Latitude : </b> {{selectedMonitorAmend.latitude}}<br/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
