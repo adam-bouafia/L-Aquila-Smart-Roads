@@ -1,9 +1,9 @@
 # L'Aquila Smart Road Plateform
 
 ```
-For the Project of Software Oriented at Univaq:
+For the Project of Software Oriented at @Univaq:
 
-This Project is built using Spring Boot and Angular, designed as a monitor violation detection system. Its primary goal is to monitor vehicules violations.
+It's built using Spring Boot and Angular, designed as a monitor violation detection system. Its primary goal is to monitor vehicules violations.
 
 The backend is implemented with Spring Boot, while the frontend utilizes Angular and Bootstrap for the user interface.
 
