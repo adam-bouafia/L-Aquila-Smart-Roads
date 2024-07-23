@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Amend } from '../models/amends.model';
 
-const baseUrl = '${this.env.get('API_URL')}/AMEND-SERVICE/';
+const baseUrl = 'http://localhost:8890/AMEND-SERVICE/';
 
 /**
  * Service for managing amends.
@@ -20,7 +20,7 @@ export class AmendsService {
    */
   getAllAmends(): Observable<Amend[]> {
     return this.http.get<Amend[]>(
-      `${this.env.get('API_URL')}/AMEND-SERVICE/api/amend/fullAmends`
+      `http://localhost:8890/AMEND-SERVICE/api/amend/fullAmends`
     );
   }
 
@@ -102,7 +102,7 @@ export class AmendsService {
    */
   getAllAmendsPages(page: number, size: number): Observable<any> {
     return this.http.get<any>(
-      `${this.env.get('API_URL')}/AMEND-SERVICE/api/amend/fullAmendsPages?page=${page}&size=${size}`
+      `http://localhost:8890/AMEND-SERVICE/api/amend/fullAmendsPages?page=${page}&size=${size}`
     );
   }
 
@@ -112,7 +112,7 @@ export class AmendsService {
    */
   getAmendsCount(): Observable<number> {
     return this.http.get<number>(
-      `${this.env.get('API_URL')}/AMEND-SERVICE/api/amend/count`
+      `http://localhost:8890/AMEND-SERVICE/api/amend/count`
     );
   }
 }

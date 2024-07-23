@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, retry } from 'rxjs';
 import { ValidationErrors } from '@angular/forms';
 import { Vehicle } from '../models/vehicle.model';
-const baseUrl = '${this.env.get('API_URL')}/VEHICLES-SERVICE/api/vehicle/';
+const baseUrl = 'http://localhost:8890/VEHICLES-SERVICE/api/vehicle/';
 /**
  * Service for managing vehicles.
  */
@@ -40,7 +40,7 @@ export class VehiclesService {
    */
   addVehicle(vehicle: Vehicle): Observable<Vehicle> {
     return this.http.post<Vehicle>(
-      `${this.env.get('API_URL')}/VEHICLES-SERVICE/vehicles`,
+      `http://localhost:8890/VEHICLES-SERVICE/vehicles`,
       vehicle
     );
   }
@@ -52,7 +52,7 @@ export class VehiclesService {
    */
   editVehicle(vehicle: Vehicle): Observable<Vehicle> {
     return this.http.put<Vehicle>(
-      `${this.env.get('API_URL')}/VEHICLES-SERVICE/vehicles/${vehicle.id}`,
+      `http://localhost:8890/VEHICLES-SERVICE/vehicles/${vehicle.id}`,
       vehicle
     );
   }
@@ -64,7 +64,7 @@ export class VehiclesService {
    */
   public deleteVehicle(id: number): Observable<boolean> {
     return this.http.delete<boolean>(
-      `${this.env.get('API_URL')}/VEHICLES-SERVICE/vehicles/${id}`
+      `http://localhost:8890/VEHICLES-SERVICE/vehicles/${id}`
     );
   }
 
@@ -75,7 +75,7 @@ export class VehiclesService {
    */
   public searchVehicle(keyword: string): Observable<any> {
     return this.http.get<any>(
-      `${this.env.get('API_URL')}/VEHICLES-SERVICE/api/vehicle/pageVehicleName/${keyword}`
+      `http://localhost:8890/VEHICLES-SERVICE/api/vehicle/pageVehicleName/${keyword}`
     );
   }
 
@@ -86,7 +86,7 @@ export class VehiclesService {
    */
   getVehicle(id: number): Observable<Vehicle> {
     return this.http.get<Vehicle>(
-      `${this.env.get('API_URL')}/VEHICLES-SERVICE/api/vehicle/vehicles/${id}`
+      `http://localhost:8890/VEHICLES-SERVICE/api/vehicle/vehicles/${id}`
     );
   }
 
@@ -119,7 +119,7 @@ export class VehiclesService {
    */
   getAllVehiclesPages(page: number, size: number): Observable<any> {
     return this.http.get<any>(
-      `${this.env.get('API_URL')}/VEHICLES-SERVICE/api/vehicle/pageVehicle?page=${page}&size=${size}`
+      `http://localhost:8890/VEHICLES-SERVICE/api/vehicle/pageVehicle?page=${page}&size=${size}`
     );
   }
 
@@ -129,7 +129,7 @@ export class VehiclesService {
    */
   getVehiclesCount(): Observable<number> {
     return this.http.get<number>(
-      '${this.env.get('API_URL')}/VEHICLES-SERVICE/api/vehicle/count'
+      'http://localhost:8890/VEHICLES-SERVICE/api/vehicle/count'
     );
   }
 }

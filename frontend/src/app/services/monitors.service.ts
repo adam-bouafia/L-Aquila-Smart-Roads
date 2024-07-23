@@ -4,7 +4,7 @@ import { PageMonitor, Monitor } from '../models/monitor.model';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { ValidationErrors } from '@angular/forms';
 
-const baseUrl = '${this.env.get('API_URL')}/MONITOR-SERVICE/api/monitor/';
+const baseUrl = 'http://localhost:8890/MONITOR-SERVICE/api/monitor/';
 
 /**
  * Service for managing monitors.
@@ -19,7 +19,7 @@ export class MonitorsService {
   constructor(private http: HttpClient) {
     // Fetch monitors data from the server
     this.http
-      .get('${this.env.get('API_URL')}/MONITOR-SERVICE/api/monitor/monitors')
+      .get('http://localhost:8890/MONITOR-SERVICE/api/monitor/monitors')
       .subscribe({
         next: (data) => {
           this.monitors = data as Monitor[];
@@ -45,7 +45,7 @@ export class MonitorsService {
    */
   addMonitor(monitor: Monitor): Observable<Monitor> {
     return this.http.post<Monitor>(
-      `${this.env.get('API_URL')}/MONITOR-SERVICE/monitors`,
+      `http://localhost:8890/MONITOR-SERVICE/monitors`,
       monitor
     );
   }
@@ -57,7 +57,7 @@ export class MonitorsService {
    */
   editMonitor(monitor: Monitor): Observable<Monitor> {
     return this.http.put<Monitor>(
-      `${this.env.get('API_URL')}/MONITOR-SERVICE/monitors/${monitor.id}`,
+      `http://localhost:8890/MONITOR-SERVICE/monitors/${monitor.id}`,
       monitor
     );
   }
@@ -69,7 +69,7 @@ export class MonitorsService {
    */
   public deleteMonitor(id: number): Observable<boolean> {
     return this.http.delete<boolean>(
-      `${this.env.get('API_URL')}/MONITOR-SERVICE/monitors/${id}`
+      `http://localhost:8890/MONITOR-SERVICE/monitors/${id}`
     );
   }
 
@@ -80,7 +80,7 @@ export class MonitorsService {
    */
   public searchMonitor(keyword: string): Observable<any> {
     return this.http.get<any>(
-      `${this.env.get('API_URL')}/MONITOR-SERVICE/api/monitor/pageMonitorName/${keyword}`
+      `http://localhost:8890/MONITOR-SERVICE/api/monitor/pageMonitorName/${keyword}`
     );
   }
 
@@ -91,7 +91,7 @@ export class MonitorsService {
    */
   getMonitor(id: number): Observable<Monitor> {
     return this.http.get<Monitor>(
-      `${this.env.get('API_URL')}/MONITOR-SERVICE/api/monitor/monitors/${id}`
+      `http://localhost:8890/MONITOR-SERVICE/api/monitor/monitors/${id}`
     );
   }
 
@@ -124,7 +124,7 @@ export class MonitorsService {
    */
   getAllMonitorsPages(page: number, size: number): Observable<any> {
     return this.http.get<any>(
-      `${this.env.get('API_URL')}/MONITOR-SERVICE/api/monitor/pageMonitor?page=${page}&size=${size}`
+      `http://localhost:8890/MONITOR-SERVICE/api/monitor/pageMonitor?page=${page}&size=${size}`
     );
   }
 
@@ -134,7 +134,7 @@ export class MonitorsService {
    */
   getMonitorsCount(): Observable<number> {
     return this.http.get<number>(
-      '${this.env.get('API_URL')}/MONITOR-SERVICE/api/monitor/count'
+      'http://localhost:8890/MONITOR-SERVICE/api/monitor/count'
     );
   }
 }

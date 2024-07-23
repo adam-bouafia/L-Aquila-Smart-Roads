@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="1c607789-e5d5-48e9-8570-f6cedd2dd859" activeEnvironment="Default" name="SOAP" resourceRoot="" soapui-version="5.7.2" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="f4bca22f-d0d3-41fe-bf09-4cf61ef52cd2" wsaVersion="NONE" name="OwnerSoapServiceServiceSoapBinding" type="wsdl" bindingName="{http://soap.web.vehiculeservice.sose.disim.univaq/}OwnerSoapServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8085/services/owService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8085/services/owService?wsdl"><con:part><con:url>http://localhost:8085/services/owService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="OwnerSoapServiceService" targetNamespace="http://soap.web.vehiculeservice.sose.disim.univaq/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://soap.web.vehiculeservice.sose.disim.univaq/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://soap.web.vehiculeservice.sose.disim.univaq/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getOwnerById" type="tns:getOwnerById"/>
+      <xs:element name="getOwnerByIdResponse" type="tns:getOwnerByIdResponse"/>
+      <xs:element name="getOwners" type="tns:getOwners"/>
+      <xs:element name="getOwnersResponse" type="tns:getOwnersResponse"/>
+      <xs:complexType name="getOwners">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="getOwnersResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:owner"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="owner">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="birthDate" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="email" type="xs:string"/>
+          <xs:element minOccurs="0" name="id" type="xs:long"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="vehicles" nillable="true" type="tns:vehicle"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="vehicle">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="fiscalPower" type="xs:double"/>
+          <xs:element minOccurs="0" name="id" type="xs:long"/>
+          <xs:element minOccurs="0" name="manufacturer" type="xs:string"/>
+          <xs:element minOccurs="0" name="model" type="xs:string"/>
+          <xs:element minOccurs="0" name="owner" type="tns:owner"/>
+          <xs:element minOccurs="0" name="registrationNumber" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getOwnerById">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" type="xs:long"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getOwnerByIdResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:owner"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getOwnersResponse">
+    <wsdl:part element="tns:getOwnersResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOwnerByIdResponse">
+    <wsdl:part element="tns:getOwnerByIdResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOwnerById">
+    <wsdl:part element="tns:getOwnerById" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOwners">
+    <wsdl:part element="tns:getOwners" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="OwnerSoapService">
+    <wsdl:operation name="getOwners">
+      <wsdl:input message="tns:getOwners" name="getOwners"></wsdl:input>
+      <wsdl:output message="tns:getOwnersResponse" name="getOwnersResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOwnerById">
+      <wsdl:input message="tns:getOwnerById" name="getOwnerById"></wsdl:input>
+      <wsdl:output message="tns:getOwnerByIdResponse" name="getOwnerByIdResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OwnerSoapServiceServiceSoapBinding" type="tns:OwnerSoapService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getOwners">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getOwners">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getOwnersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOwnerById">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getOwnerById">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getOwnerByIdResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OwnerSoapServiceService">
+    <wsdl:port binding="tns:OwnerSoapServiceServiceSoapBinding" name="OwnerSoapServicePort">
+      <soap:address location="http://localhost:8085/services/owService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8085/services/owService</con:endpoint></con:endpoints><con:operation id="48485cd2-c9bb-47fc-8e4a-b86755d9c3f7" isOneWay="false" action="" name="getOwnerById" bindingOperationName="getOwnerById" type="Request-Response" outputName="getOwnerByIdResponse" inputName="getOwnerById" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="68af55c7-0489-42f4-936d-bb7026f1f761" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8085/services/owService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.web.vehiculeservice.sose.disim.univaq/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <soap:getOwnerById>\r
+         <!--Optional:-->\r
+         <id>1</id>\r
+      </soap:getOwnerById>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.web.vehiculeservice.sose.disim.univaq/OwnerSoapService/getOwnerById"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="04ddab1c-41dd-4f6f-b579-a953b640f958" isOneWay="false" action="" name="getOwners" bindingOperationName="getOwners" type="Request-Response" outputName="getOwnersResponse" inputName="getOwners" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="eb52a1df-8924-4481-9881-a6d9edddbef7" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8085/services/owService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://soap.web.vehiculeservice.sose.disim.univaq/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <soap:getOwners/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://soap.web.vehiculeservice.sose.disim.univaq/OwnerSoapService/getOwners"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
