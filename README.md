@@ -1,15 +1,13 @@
 # L'Aquila Smart Road Plateform
 
-```
-This is a web-based application built using Spring Boot and Angular. It is a monitor violation detection
-system It aims to detect and track monitor violations, providing real-time notifications and reporting
-reporting for efficient traffic management.
-The backend is built using Spring Boot , while the frontend is built using Angular with Bootstrap for
-the user interface.
+``
+For the Project of Software Oriented at Univaq:
 
-In addition to the standard operations of data querying and modification, the system allow for
-the submission of a speeding violation, resulting in an offense record. Furthermore, it should enable
-vehicle owners to view their own violations, providing them with easy access to their offense history.
+This Project is built using Spring Boot and Angular, designed as a monitor violation detection system. Its primary goal is to monitor vehicules violations.
+
+The backend is implemented with Spring Boot, while the frontend utilizes Angular and Bootstrap for the user interface.
+
+Beyond standard data querying and modification, the system allows for the submission of speeding violations, resulting in an offense record. Additionally, it enables vehicle owners to view their own violations, giving them easy access to their offense history.
 ```
 
 # Table of Contents
@@ -82,11 +80,13 @@ The application allows performing the following operations:
 
 ## Technical Architecture
 
-<img src="https://github.com/el-moudni-hicham/Monitor-violation-detection-system/assets/85403056/f49b19b6-7f95-4f45-8b65-1060db7d9dc7">
+<img src="![Architecture](https://github.com/user-attachments/assets/f8b540df-cbed-4c57-be93-ac56e04d43b4)
+">
 
 ## Class Diagram 
 
-<img src="https://github.com//assets/85403056/3f6bacdd-84ea-4e1e-9c9f-0ae69cca8202" width="70%">
+<img src="![Class Diagram](https://github.com/user-attachments/assets/7e8cdf9b-a1ef-448e-9eb7-de027f98d2ec)
+" width="70%">
 
 ## Backend Services
 
@@ -108,7 +108,6 @@ A vehicle is defined by its ID, Vehicule number, brand, fiscal power, and model
 │   │   │   └───univaq
 │   │   │       └───disim
                 └───sose
-
 │   │   │           └───Vehiculeservice
 │   │   │               │   VehiculeServiceApplication.java
 │   │   │               │
@@ -166,7 +165,8 @@ Tests with `Postman`
         <td >
             <h5 align="center">All Vehicles</h3>
                 <p align="center">
-                    <img src="https://github.com//assets/85403056/77beb752-739f-47fd-845f-c666ea4ab362" alt="project example"/>
+                    <img src="![vehicles REST](https://github.com/user-attachments/assets/cf5d415e-f478-4101-9147-c2fbf13bc6f9)
+" alt="project example"/>
                 </p>
         </td>
     </tr>
@@ -174,7 +174,8 @@ Tests with `Postman`
         <td >
             <h5 align="center">Find Vehicle By Id</h3>
                 <p align="center">
-                    <img src="https://github.com//assets/85403056/4b2cf16c-1340-4404-8cec-1bcdc51f524c" alt="project example"/>
+                    <img src="![vehiclesFindbyID REST](https://github.com/user-attachments/assets/3ccbee78-1f24-41bc-bcd9-961544928878)
+" alt="project example"/>
                 </p>
         </td>
     </tr>
@@ -185,7 +186,8 @@ Tests with `Postman`
         <td >
             <h5 align="center">Delete Vehicle</h3>
                 <p align="center">
-                    <img src="https://github.com//assets/85403056/7a2c7083-7539-4dcd-b506-3556fec50c3a" alt="project example"/>
+                    <img src="![DELETEvehiclesFindbyID REST](https://github.com/user-attachments/assets/9cd73ff9-43ce-4b37-b702-9af67171743b)
+" alt="project example"/>
                 </p>
         </td>
     </tr>
@@ -193,7 +195,8 @@ Tests with `Postman`
         <td >
             <h5 align="center">Update Vehicle</h3>
                 <p align="center">
-                    <img src="https://github.com//assets/85403056/270691bf-1f79-446c-9359-20fec739881c" alt="project example"/>
+                    <img src="![UpdateVehicle](https://github.com/user-attachments/assets/94685139-2406-4189-a301-f5710d5883a9)
+" alt="project example"/>
                 </p>
         </td>
     </tr>
@@ -206,17 +209,9 @@ Tests with `Postman`
         <td>
             <h5 align="center">All Vehicles with specific attributs </h3>
                 <p align="center">
-                    <img alt="project example"
-                         src="https://github.com//assets/85403056/e29db325-f14f-4d6a-9916-0ee1d1760da0"/>
-                </p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <h5 align="center">Find Vehicle By Id with specific attributs</h3>
-                <p align="center">
-                    <img alt="project example"
-                         src="https://github.com//assets/85403056/15f188ac-d384-455d-a8ed-91363143f97f"/>
+                    <img alt="p![GraphQl](https://github.com/user-attachments/assets/ee937c48-395e-494d-b3c4-1506a6d7ffcd)
+roject example"
+                         src=""/>
                 </p>
         </td>
     </tr>
@@ -230,15 +225,8 @@ Tests with `SoapUI`
         <td >
             <h5 align="center">All Owners </h3>
                 <p align="center">
-                    <img src="https://github.com//assets/85403056/7a01b2b9-3807-43e1-884d-8c0cbfcbb994" alt="project example"/>
-                </p>
-        </td>
-    </tr>
-    <tr>
-        <td >
-            <h5 align="center">Find Owner By Id</h3>
-                <p align="center">
-                    <img src="https://github.com//assets/85403056/52bc6d85-1dc1-4f00-b9da-701d500a8b4a" alt="project example"/>
+                    <img src="![Soap Service test](https://github.com/user-attachments/assets/78c32391-7c10-41fa-ab5e-ac125bbd6292)
+" alt="project example"/>
                 </p>
         </td>
     </tr>
@@ -253,7 +241,7 @@ Tests with `BloomRPC`
             <h5 align="center">All Owners </h3>
                 <p align="center">
                     <img alt="project example"
-                         src="https://github.com//assets/85403056/abc8437c-d043-4821-b684-0a27917cb13c"/>
+                         src="![OwnerGrpcService_listOwners](https://github.com/user-attachments/assets/becc66a1-bf21-4e93-bc7a-056e3aa0f76e)"/>
                 </p>
         </td>
     </tr>
@@ -262,7 +250,7 @@ Tests with `BloomRPC`
             <h5 align="center">Find Owner By Id</h3>
                 <p align="center">
                     <img alt="project example"
-                         src="https://github.com//assets/85403056/7b33bad2-3ac7-415d-ab60-33d3ae23b08e"/>
+                         src="![OwnerGrpcService_getOwners](https://github.com/user-attachments/assets/12e765b9-ce32-4e8a-8dac-3bbbff860ef1)"/>
                 </p>
         </td>
     </tr>
@@ -313,7 +301,14 @@ by their ID, maximum speed limit, and coordinates (longitude and latitude)
 │   │       └───templates
 </pre>
 
-### amend Service 
+![UI Monitors](https://github.com/user-attachments/assets/afd8a52b-70f9-4e3b-a4af-4b7b5c77355c)
+
+
+![UI New Monitor](https://github.com/user-attachments/assets/c9ada194-fed3-42b8-b745-c517a846ff4c)
+
+
+
+### Amend Service 
 
 ```
 amend microservice responsible for managing violations handles each violation, which is defined
@@ -357,6 +352,10 @@ the vehicle's speed, the monitor's maximum speed limit, and the fine amount.
 │   │       └───templates
 </pre>
 
+![UI Amends](https://github.com/user-attachments/assets/771ddf2c-8faf-42c5-82b3-86b762e94fd2)
+
+
+
 ### Eureka Discovery Service
 ```
 server-side component in the Netflix OSS stack that allows services to register
@@ -386,6 +385,10 @@ and discover each other in a microservices architecture.
 │
 </pre>
 
+![Eureka](https://github.com/user-attachments/assets/3b760cb8-ae61-4684-8d3f-8af9ec68824b)
+
+
+
 ### Gateway Service
 ```
 Spring Cloud Gateway It provides a centralized entry point for routing and filtering requests
@@ -407,7 +410,7 @@ to microservices in a distributed system, enabling dynamic and scalable routing 
 │   │           application.yml
 </pre>
 
-### Road Monitor
+### Data Generator Service
 ```
 A Java application that simulates a monitor system generating random speeding violations
 and sending them to the Monitor-Service.
@@ -444,7 +447,8 @@ and sending them to the Monitor-Service.
         <td>
             <p align="center">
                 <img alt="project example"
-                     src="https://github.com//assets/85403056/0068cd62-3044-47ad-b1ac-a03c34713801"/>
+                     src="![Data Generator Service Example](https://github.com/user-attachments/assets/6d757349-0f3d-4dd6-a622-665f04ef41ca)
+"/>
             </p>
         </td>
     </tr>
@@ -456,7 +460,11 @@ and sending them to the Monitor-Service.
 ## Video Demonstration
 
 
-https://github.com//assets/85403056/7fd47b94-4f64-4155-86b4-5575ab3ed6ab
+
+
+https://github.com/user-attachments/assets/9307b89d-045d-457d-b22a-9f3ff03d31f3
+
+
 
 
 ## Application Sceenshots
@@ -474,7 +482,8 @@ https://github.com//assets/85403056/7fd47b94-4f64-4155-86b4-5575ab3ed6ab
         <td >
             <p align="center">
                 <h5 align="center">Welcome Page</h3>
-                <img src="https://github.com//assets/85403056/62a7c75a-116c-4f7d-84c0-4a2cdfa207a1" alt="project example"/>
+                <img src="![UI login](https://github.com/user-attachments/assets/1cf5039a-3187-4fa0-9045-10512da22cf8)
+" alt="project example"/>
             </p>
         </td>
     </tr>
@@ -486,7 +495,7 @@ https://github.com//assets/85403056/7fd47b94-4f64-4155-86b4-5575ab3ed6ab
         <td >
             <p align="center">
                 <h5 align="center">Dashboard Statistics</h3>
-                <img src="https://github.com//assets/85403056/8287e677-e027-4f0c-ad20-be6a50ba7fa7" alt="project example"/>
+                <img src=![UI Control Center](https://github.com/user-attachments/assets/6c9386fc-5a80-4605-aedd-5e07ca6ed3fa) alt="project example"/>
             </p>
         </td>
     </tr>
@@ -494,7 +503,8 @@ https://github.com//assets/85403056/7fd47b94-4f64-4155-86b4-5575ab3ed6ab
         <td >
             <p align="center">
                 <h5 align="center">Monitors Page</h3>
-                <img src="https://github.com//assets/85403056/bb9aad80-0ec5-4afe-8dbc-e14d61824e0d" alt="project example"/>
+                <img src="![UI Monitors](https://github.com/user-attachments/assets/049581c5-476a-4026-b7b1-e7b76a7b38b5)"
+ alt="project example"/>
             </p>
         </td>
     </tr>
@@ -505,16 +515,9 @@ https://github.com//assets/85403056/7fd47b94-4f64-4155-86b4-5575ab3ed6ab
     <tr>
         <td >
             <p align="center">
-                <h5 align="center">Sweet Alerts Example</h3>
-                <img src="https://github.com//assets/85403056/d3f1c38a-349b-4afc-be32-6a48ce1cc105" alt="project example"/>
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td >
-            <p align="center">
                 <h5 align="center">Add New Monitor</h3>
-                <img src="https://github.com//assets/85403056/df5a0b4e-d3c2-458d-aa82-98d985447ee9" alt="project example"/>
+                <img src="![UI New Monitor](https://github.com/user-attachments/assets/3f308521-04b3-4230-883f-b4e47eb2f8d2)
+" alt="project example"/>
             </p>
         </td>
     </tr>
@@ -525,7 +528,8 @@ https://github.com//assets/85403056/7fd47b94-4f64-4155-86b4-5575ab3ed6ab
         <td >
             <p align="center">
                 <h5 align="center">Vehicles and their Owners Page</h3>
-                <img src="https://github.com//assets/85403056/30068f49-7b6d-47b7-a730-763e6116a311" alt="project example"/>
+                <img src="![UI Vehicles](https://github.com/user-attachments/assets/aa288d75-38da-43bd-9ece-11fcf3cdf85d)
+" alt="project example"/>
             </p>
         </td>
     </tr>
@@ -533,7 +537,8 @@ https://github.com//assets/85403056/7fd47b94-4f64-4155-86b4-5575ab3ed6ab
         <td >
             <p align="center">
                 <h5 align="center">amends Page</h3>
-                <img src="https://github.com//assets/85403056/30e08ef6-a881-4358-a458-548eedfb879c" alt="project example"/>
+                <img src="![UI Amends](https://github.com/user-attachments/assets/fbe75a11-b5c6-49fa-b9df-472b8335bd7c)
+" alt="project example"/>
             </p>
         </td>
     </tr>
@@ -545,7 +550,8 @@ https://github.com//assets/85403056/7fd47b94-4f64-4155-86b4-5575ab3ed6ab
         <td >
             <p align="center">
                 <h5 align="center">Show PDF</h3>
-                <img src="https://github.com//assets/85403056/916ead93-b5b0-47e4-802f-5947ecf9d223" alt="project example"/>
+                <img src="![amend pdf](https://github.com/user-attachments/assets/d54e2695-067e-4a13-9db1-79acaef6c6b5)
+" alt="project example"/>
             </p>
         </td>
     </tr>
