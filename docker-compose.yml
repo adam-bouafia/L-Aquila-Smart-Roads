@@ -46,10 +46,10 @@ services:
     networks:
       - microservices
 
-  monitor-service:
+  monitor-prosumer:
     build:
-      context: ./backend/monitors-service
-    container_name: monitor-service
+      context: ./backend/monitors-prosumer
+    container_name: monitor-prosumer
     depends_on:
       discovery-server:
         condition: service_healthy
@@ -74,10 +74,10 @@ services:
     networks:
       - microservices
 
-  amend-service:
+  amend-prosumer:
     build:
-      context: ./backend/amend-service
-    container_name: amend-service
+      context: ./backend/amend-prosumer
+    container_name: amend-prosumer
     depends_on:
       discovery-server:
         condition: service_healthy

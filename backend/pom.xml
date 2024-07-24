@@ -20,11 +20,11 @@
     </properties>
 
     <modules>
-        <module>amend-service</module>
+        <module>amend-prosumer</module>
         <module>datagenerator-service</module>
         <module>discovery-server</module>
         <module>gateway-service</module>
-        <module>monitors-service</module>
+        <module>monitors-prosumer</module>
         <module>vehicles-service</module>
     </modules>
 

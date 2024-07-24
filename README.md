@@ -20,7 +20,7 @@ Beyond standard data querying and modification, the system allows for the submis
 - [Backend Services](#backend-services)
     - [Vehicule Service](#Vehicule-service)
     - [Monitor Service](#monitor-service)
-    - [amend Service](#amend-service)
+    - [amend Service](#amend-prosumer)
     - [Eureka Discovery Service](#eureka-discovery-service)
     - [Gateway Service](#gateway-service)
     - [Data Generator Service](#data-generator-service)
@@ -264,8 +264,8 @@ by their ID, maximum speed limit, and coordinates (longitude and latitude)
 │   │   │   └───univaq
 │   │   │       └───disim
                  └───sose
-│   │   │           └───monitorservice
-│   │   │               │   MonitorServiceApplication.java
+│   │   │           └───monitorprosumer
+│   │   │               │   MonitorProsumerApplication.java
 │   │   │               │
 │   │   │               ├───entites
 │   │   │               │       Monitor.java
