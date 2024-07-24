@@ -35,7 +35,9 @@ https://github.com/user-attachments/assets/9307b89d-045d-457d-b22a-9f3ff03d31f3
         <td>
             <p align="center">
                 <h5 align="center">Welcome Page</h5>
-                <img src="https://github.com/user-attachments/assets/87e4b21d-1836-4cac-b17c-f09e5db18f3f" alt="UI welcome">
+                <img src="https://github.com/user-attachments/assets/4b61f943-2a1d-4394-9aa0-14353cf38fab" alt="UI welcome">
+
+                  
             </p>
         </td>
     </tr>
