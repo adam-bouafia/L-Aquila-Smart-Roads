@@ -167,7 +167,8 @@ Tests with `Postman`
         <td >
             <h5 align="center">All Vehicles</h3>
                 <p align="center">
-<img src="![vehicles REST](https://github.com/user-attachments/assets/d6ca1663-5e91-4da5-a25a-666ae6252ac9)" alt="project example"/>
+<img src="![vehicles REST](https://github.com/user-attachments/assets/f9af5e6b-50ad-4da0-8e68-14ff1ff743b5)" alt="p
+roject example"/>
                 </p>
         </td>
     </tr>
