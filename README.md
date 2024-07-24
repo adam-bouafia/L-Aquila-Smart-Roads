@@ -87,7 +87,7 @@ The application allows performing the following operations:
 
 ## Class Diagram 
 
-<![Class Diagram](https://github.com/user-attachments/assets/48e3bd84-9ae0-4ce9-9365-5a07a27f4704)
+![Class Diagram](https://github.com/user-attachments/assets/48e3bd84-9ae0-4ce9-9365-5a07a27f4704)
 
 
 ## Backend Services
@@ -167,8 +167,7 @@ Tests with `Postman`
         <td >
             <h5 align="center">All Vehicles</h3>
                 <p align="center">
-<img src="![vehicles REST](https://github.com/user-attachments/assets/f9af5e6b-50ad-4da0-8e68-14ff1ff743b5)" alt="p
-roject example"/>
+![vehicles REST](https://github.com/user-attachments/assets/f9af5e6b-50ad-4da0-8e68-14ff1ff743b5)
                 </p>
         </td>
     </tr>
@@ -176,8 +175,7 @@ roject example"/>
         <td >
             <h5 align="center">Find Vehicle By Id</h3>
                 <p align="center">
-                    <img src="![vehiclesFindbyID REST](https://github.com/user-attachments/assets/3ccbee78-1f24-41bc-bcd9-961544928878)
-" alt="project example"/>
+![vehiclesFindbyID REST](https://github.com/user-attachments/assets/3ccbee78-1f24-41bc-bcd9-961544928878)
                 </p>
         </td>
     </tr>
@@ -188,8 +186,8 @@ roject example"/>
         <td >
             <h5 align="center">Delete Vehicle</h3>
                 <p align="center">
-                    <img src="![DELETEvehiclesFindbyID REST](https://github.com/user-attachments/assets/9cd73ff9-43ce-4b37-b702-9af67171743b)
-" alt="project example"/>
+                    ![DELETEvehiclesFindbyID REST](https://github.com/user-attachments/assets/9cd73ff9-43ce-4b37-b702-9af67171743b)
+"
                 </p>
         </td>
     </tr>
@@ -197,8 +195,8 @@ roject example"/>
         <td >
             <h5 align="center">Update Vehicle</h3>
                 <p align="center">
-                    <img src="![UpdateVehicle](https://github.com/user-attachments/assets/94685139-2406-4189-a301-f5710d5883a9)
-" alt="project example"/>
+                    ![UpdateVehicle](https://github.com/user-attachments/assets/94685139-2406-4189-a301-f5710d5883a9)
+"
                 </p>
         </td>
     </tr>
@@ -211,9 +209,7 @@ roject example"/>
         <td>
             <h5 align="center">All Vehicles with specific attributs </h3>
                 <p align="center">
-                    <img alt="p![GraphQl](https://github.com/user-attachments/assets/ee937c48-395e-494d-b3c4-1506a6d7ffcd)
-roject example"
-                         src=""/>
+                  ![GraphQl](https://github.com/user-attachments/assets/ee937c48-395e-494d-b3c4-1506a6d7ffcd)
                 </p>
         </td>
     </tr>
@@ -227,8 +223,8 @@ Tests with `SoapUI`
         <td >
             <h5 align="center">All Owners </h3>
                 <p align="center">
-                    <img src="![Soap Service test](https://github.com/user-attachments/assets/78c32391-7c10-41fa-ab5e-ac125bbd6292)
-" alt="project example"/>
+                    ![Soap Service test](https://github.com/user-attachments/assets/78c32391-7c10-41fa-ab5e-ac125bbd6292)
+"
                 </p>
         </td>
     </tr>
@@ -242,8 +238,7 @@ Tests with `BloomRPC`
         <td>
             <h5 align="center">All Owners </h3>
                 <p align="center">
-                    <img alt="project example"
-                         src="![OwnerGrpcService_listOwners](https://github.com/user-attachments/assets/becc66a1-bf21-4e93-bc7a-056e3aa0f76e)"/>
+                         ![OwnerGrpcService_listOwners](https://github.com/user-attachments/assets/becc66a1-bf21-4e93-bc7a-056e3aa0f76e)
                 </p>
         </td>
     </tr>
@@ -251,8 +246,7 @@ Tests with `BloomRPC`
         <td>
             <h5 align="center">Find Owner By Id</h3>
                 <p align="center">
-                    <img alt="project example"
-                         src="![OwnerGrpcService_getOwners](https://github.com/user-attachments/assets/12e765b9-ce32-4e8a-8dac-3bbbff860ef1)"/>
+                         [OwnerGrpcService_getOwners](https://github.com/user-attachments/assets/12e765b9-ce32-4e8a-8dac-3bbbff860ef1)
                 </p>
         </td>
     </tr>
@@ -448,9 +442,8 @@ and sending them to the Monitor-Service.
     <tr>
         <td>
             <p align="center">
-                <img alt="project example"
-                     src="![Data Generator Service Example](https://github.com/user-attachments/assets/6d757349-0f3d-4dd6-a622-665f04ef41ca)
-"/>
+              roject example"
+                    ![Data Generator Service Example](https://github.com/user-attachments/assets/6d757349-0f3d-4dd6-a622-665f04ef41ca)
             </p>
         </td>
     </tr>
@@ -476,7 +469,7 @@ https://github.com/user-attachments/assets/9307b89d-045d-457d-b22a-9f3ff03d31f3
         <td >
             <p align="center">
                 <h5 align="center">Login Page</h3>
-                <img src="https://github.com//assets/85403056/212c815e-853a-4c31-a4db-695ad8ea46fc" alt="project example"/>
+                https://github.com//assets/85403056/212c815e-853a-4c31-a4db-695ad8ea46fc"
             </p>
         </td>
     </tr>
@@ -484,8 +477,7 @@ https://github.com/user-attachments/assets/9307b89d-045d-457d-b22a-9f3ff03d31f3
         <td >
             <p align="center">
                 <h5 align="center">Welcome Page</h3>
-                <img src="![UI login](https://github.com/user-attachments/assets/1cf5039a-3187-4fa0-9045-10512da22cf8)
-" alt="project example"/>
+               ![UI login](https://github.com/user-attachments/assets/87e4b21d-1836-4cac-b17c-f09e5db18f3f)
             </p>
         </td>
     </tr>
@@ -497,7 +489,7 @@ https://github.com/user-attachments/assets/9307b89d-045d-457d-b22a-9f3ff03d31f3
         <td >
             <p align="center">
                 <h5 align="center">Dashboard Statistics</h3>
-                <img src=![UI Control Center](https://github.com/user-attachments/assets/6c9386fc-5a80-4605-aedd-5e07ca6ed3fa) alt="project example"/>
+               ![UI Control Center](https://github.com/user-attachments/assets/6c9386fc-5a80-4605-aedd-5e07ca6ed3fa)
             </p>
         </td>
     </tr>
@@ -505,8 +497,8 @@ https://github.com/user-attachments/assets/9307b89d-045d-457d-b22a-9f3ff03d31f3
         <td >
             <p align="center">
                 <h5 align="center">Monitors Page</h3>
-                <img src="![UI Monitors](https://github.com/user-attachments/assets/049581c5-476a-4026-b7b1-e7b76a7b38b5)"
- alt="project example"/>
+                ![UI Monitors](https://github.com/user-attachments/assets/049581c5-476a-4026-b7b1-e7b76a7b38b5)"
+
             </p>
         </td>
     </tr>
@@ -518,8 +510,7 @@ https://github.com/user-attachments/assets/9307b89d-045d-457d-b22a-9f3ff03d31f3
         <td >
             <p align="center">
                 <h5 align="center">Add New Monitor</h3>
-                <img src="![UI New Monitor](https://github.com/user-attachments/assets/3f308521-04b3-4230-883f-b4e47eb2f8d2)
-" alt="project example"/>
+                ![UI New Monitor](https://github.com/user-attachments/assets/3f308521-04b3-4230-883f-b4e47eb2f8d2)
             </p>
         </td>
     </tr>
@@ -530,8 +521,8 @@ https://github.com/user-attachments/assets/9307b89d-045d-457d-b22a-9f3ff03d31f3
         <td >
             <p align="center">
                 <h5 align="center">Vehicles and their Owners Page</h3>
-                <img src="![UI Vehicles](https://github.com/user-attachments/assets/aa288d75-38da-43bd-9ece-11fcf3cdf85d)
-" alt="project example"/>
+                ![UI Vehicles](https://github.com/user-attachments/assets/aa288d75-38da-43bd-9ece-11fcf3cdf85d)
+"
             </p>
         </td>
     </tr>
@@ -539,8 +530,7 @@ https://github.com/user-attachments/assets/9307b89d-045d-457d-b22a-9f3ff03d31f3
         <td >
             <p align="center">
                 <h5 align="center">amends Page</h3>
-                <img src="![UI Amends](https://github.com/user-attachments/assets/fbe75a11-b5c6-49fa-b9df-472b8335bd7c)
-" alt="project example"/>
+                ![UI Amends](https://github.com/user-attachments/assets/fbe75a11-b5c6-49fa-b9df-472b8335bd7c)
             </p>
         </td>
     </tr>
@@ -552,8 +542,7 @@ https://github.com/user-attachments/assets/9307b89d-045d-457d-b22a-9f3ff03d31f3
         <td >
             <p align="center">
                 <h5 align="center">Show PDF</h3>
-                <img src="![amend pdf](https://github.com/user-attachments/assets/d54e2695-067e-4a13-9db1-79acaef6c6b5)
-" alt="project example"/>
+                ![amend pdf](https://github.com/user-attachments/assets/d54e2695-067e-4a13-9db1-79acaef6c6b5)
             </p>
         </td>
     </tr>
