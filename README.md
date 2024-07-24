@@ -9,6 +9,98 @@ The backend is implemented with Spring Boot, while the frontend utilizes Angular
 
 Beyond standard data querying and modification, the system allows for the submission of speeding violations, resulting in an offense record. Additionally, it enables vehicle owners to view their own violations, giving them easy access to their offense history.
 ```
+# Frontend with Angular
+
+## Video Demonstration
+
+
+
+
+https://github.com/user-attachments/assets/9307b89d-045d-457d-b22a-9f3ff03d31f3
+
+
+
+
+## Application Sceenshots
+<table>
+    <tr>
+        <td>
+            <p align="center">
+                <h5 align="center">Login Page</h5>
+                <img src="https://github.com/user-attachments/assets/d5e5b8dd-7623-4230-9cb7-7f19427ce3ef" alt="UI login">
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p align="center">
+                <h5 align="center">Welcome Page</h5>
+                <img src="https://github.com/user-attachments/assets/87e4b21d-1836-4cac-b17c-f09e5db18f3f" alt="UI welcome">
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>
+            <p align="center">
+                <h5 align="center">Dashboard Statistics</h5>
+                <img src="https://github.com/user-attachments/assets/6c9386fc-5a80-4605-aedd-5e07ca6ed3fa" alt="UI Control Center">
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p align="center">
+                <h5 align="center">Monitors Page</h5>
+                <img src="https://github.com/user-attachments/assets/049581c5-476a-4026-b7b1-e7b76a7b38b5" alt="UI Monitors">
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>
+            <p align="center">
+                <h5 align="center">Add New Monitor</h5>
+                <img src="https://github.com/user-attachments/assets/3f308521-04b3-4230-883f-b4e47eb2f8d2" alt="UI New Monitor">
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>
+            <p align="center">
+                <h5 align="center">Vehicles and their Owners Page</h5>
+                <img src="https://github.com/user-attachments/assets/aa288d75-38da-43bd-9ece-11fcf3cdf85d" alt="UI Vehicles">
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p align="center">
+                <h5 align="center">Amends Page</h5>
+                <img src="https://github.com/user-attachments/assets/fbe75a11-b5c6-49fa-b9df-472b8335bd7c" alt="UI Amends">
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>
+            <p align="center">
+                <h5 align="center">Show PDF</h5>
+                <img src="https://github.com/user-attachments/assets/d54e2695-067e-4a13-9db1-79acaef6c6b5" alt="amend pdf">
+            </p>
+        </td>
+    </tr>
+</table>
+
 
 # Table of Contents
 - [Getting Started](#getting-started)
@@ -444,97 +536,7 @@ and sending them to the Monitor-Prosumer.
 
 </table>
 
-# Frontend with Angular
 
-## Video Demonstration
-
-
-
-
-https://github.com/user-attachments/assets/9307b89d-045d-457d-b22a-9f3ff03d31f3
-
-
-
-
-## Application Sceenshots
-<table>
-    <tr>
-        <td>
-            <p align="center">
-                <h5 align="center">Login Page</h5>
-                <img src="https://github.com/user-attachments/assets/d5e5b8dd-7623-4230-9cb7-7f19427ce3ef" alt="UI login">
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p align="center">
-                <h5 align="center">Welcome Page</h5>
-                <img src="https://github.com/user-attachments/assets/87e4b21d-1836-4cac-b17c-f09e5db18f3f" alt="UI welcome">
-            </p>
-        </td>
-    </tr>
-</table>
-
-<table>
-    <tr>
-        <td>
-            <p align="center">
-                <h5 align="center">Dashboard Statistics</h5>
-                <img src="https://github.com/user-attachments/assets/6c9386fc-5a80-4605-aedd-5e07ca6ed3fa" alt="UI Control Center">
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p align="center">
-                <h5 align="center">Monitors Page</h5>
-                <img src="https://github.com/user-attachments/assets/049581c5-476a-4026-b7b1-e7b76a7b38b5" alt="UI Monitors">
-            </p>
-        </td>
-    </tr>
-</table>
-
-<table>
-    <tr>
-        <td>
-            <p align="center">
-                <h5 align="center">Add New Monitor</h5>
-                <img src="https://github.com/user-attachments/assets/3f308521-04b3-4230-883f-b4e47eb2f8d2" alt="UI New Monitor">
-            </p>
-        </td>
-    </tr>
-</table>
-
-<table>
-    <tr>
-        <td>
-            <p align="center">
-                <h5 align="center">Vehicles and their Owners Page</h5>
-                <img src="https://github.com/user-attachments/assets/aa288d75-38da-43bd-9ece-11fcf3cdf85d" alt="UI Vehicles">
-            </p>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p align="center">
-                <h5 align="center">Amends Page</h5>
-                <img src="https://github.com/user-attachments/assets/fbe75a11-b5c6-49fa-b9df-472b8335bd7c" alt="UI Amends">
-            </p>
-        </td>
-    </tr>
-</table>
-
-<table>
-    <tr>
-        <td>
-            <p align="center">
-                <h5 align="center">Show PDF</h5>
-                <img src="https://github.com/user-attachments/assets/d54e2695-067e-4a13-9db1-79acaef6c6b5" alt="amend pdf">
-            </p>
-        </td>
-    </tr>
-</table>
 
 ## License
 This project is licensed under the GPL-3.0 license - see the LICENSE file for details.
