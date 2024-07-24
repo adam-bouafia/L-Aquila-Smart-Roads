@@ -157,59 +157,56 @@ A vehicle is defined by its ID, Vehicule number, brand, fiscal power, and model
 
 </pre>
 - Web services integration REST, GraphQL, SOAP et GRPC :
-
 > a. REST :
 
 Tests with `Postman`
 
 <table>
     <tr>
-        <td >
-            <h5 align="center">All Vehicles</h3>
-                <p align="center">
-![vehicles REST](https://github.com/user-attachments/assets/f9af5e6b-50ad-4da0-8e68-14ff1ff743b5)
+        <td>
+            <h5 align="center">All Vehicles</h5>
+            <p align="center">
+                <img src="https://github.com/user-attachments/assets/f9af5e6b-50ad-4da0-8e68-14ff1ff743b5" alt="vehicles REST">
+            </p>
         </td>
     </tr>
     <tr>
-        <td >
-            <h5 align="center">Find Vehicle By Id</h3>
-                <p align="center">
-![vehiclesFindbyID REST](https://github.com/user-attachments/assets/3ccbee78-1f24-41bc-bcd9-961544928878)
-                </p>
+        <td>
+            <h5 align="center">Find Vehicle By Id</h5>
+            <p align="center">
+                <img src="https://github.com/user-attachments/assets/3ccbee78-1f24-41bc-bcd9-961544928878" alt="vehiclesFindbyID REST">
+            </p>
         </td>
     </tr>
 </table>
 
 <table>
     <tr>
-        <td >
-            <h5 align="center">Delete Vehicle</h3>
-                <p align="center">
-                    ![DELETEvehiclesFindbyID REST](https://github.com/user-attachments/assets/9cd73ff9-43ce-4b37-b702-9af67171743b)
-"
-                </p>
+        <td>
+            <h5 align="center">Delete Vehicle</h5>
+            <p align="center">
+                <img src="https://github.com/user-attachments/assets/9cd73ff9-43ce-4b37-b702-9af67171743b" alt="DELETEvehiclesFindbyID REST">
+            </p>
         </td>
     </tr>
     <tr>
-        <td >
-            <h5 align="center">Update Vehicle</h3>
-                <p align="center">
-                    ![UpdateVehicle](https://github.com/user-attachments/assets/94685139-2406-4189-a301-f5710d5883a9)
-"
-                </p>
+        <td>
+            <h5 align="center">Update Vehicle</h5>
+            <p align="center">
+                <img src="https://github.com/user-attachments/assets/94685139-2406-4189-a301-f5710d5883a9" alt="UpdateVehicle">
+            </p>
         </td>
     </tr>
 </table>
-
 
 > b. GraphQL :
 <table>
     <tr>
         <td>
-            <h5 align="center">All Vehicles with specific attributs </h3>
-                <p align="center">
-                  ![GraphQl](https://github.com/user-attachments/assets/ee937c48-395e-494d-b3c4-1506a6d7ffcd)
-                </p>
+            <h5 align="center">All Vehicles with specific attributes</h5>
+            <p align="center">
+                <img src="https://github.com/user-attachments/assets/ee937c48-395e-494d-b3c4-1506a6d7ffcd" alt="GraphQl">
+            </p>
         </td>
     </tr>
 </table>
@@ -219,12 +216,11 @@ Tests with `Postman`
 Tests with `SoapUI`
 <table>
     <tr>
-        <td >
-            <h5 align="center">All Owners </h3>
-                <p align="center">
-                    ![Soap Service test](https://github.com/user-attachments/assets/78c32391-7c10-41fa-ab5e-ac125bbd6292)
-"
-                </p>
+        <td>
+            <h5 align="center">All Owners</h5>
+            <p align="center">
+                <img src="https://github.com/user-attachments/assets/78c32391-7c10-41fa-ab5e-ac125bbd6292" alt="Soap Service test">
+            </p>
         </td>
     </tr>
 </table>
@@ -235,22 +231,21 @@ Tests with `BloomRPC`
 <table>
     <tr>
         <td>
-            <h5 align="center">All Owners </h3>
-                <p align="center">
-                         ![OwnerGrpcService_listOwners](https://github.com/user-attachments/assets/becc66a1-bf21-4e93-bc7a-056e3aa0f76e)
-                </p>
+            <h5 align="center">All Owners</h5>
+            <p align="center">
+                <img src="https://github.com/user-attachments/assets/becc66a1-bf21-4e93-bc7a-056e3aa0f76e" alt="OwnerGrpcService_listOwners">
+            </p>
         </td>
     </tr>
     <tr>
         <td>
-            <h5 align="center">Find Owner By Id</h3>
-                <p align="center">
-                         [OwnerGrpcService_getOwners](https://github.com/user-attachments/assets/12e765b9-ce32-4e8a-8dac-3bbbff860ef1)
-                </p>
+            <h5 align="center">Find Owner By Id</h5>
+            <p align="center">
+                <img src="https://github.com/user-attachments/assets/12e765b9-ce32-4e8a-8dac-3bbbff860ef1" alt="OwnerGrpcService_getOwners">
+            </p>
         </td>
     </tr>
 </table>
-
 
 
 ####
