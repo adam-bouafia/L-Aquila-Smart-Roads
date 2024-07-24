@@ -168,7 +168,6 @@ Tests with `Postman`
             <h5 align="center">All Vehicles</h3>
                 <p align="center">
 ![vehicles REST](https://github.com/user-attachments/assets/f9af5e6b-50ad-4da0-8e68-14ff1ff743b5)
-                </p>
         </td>
     </tr>
     <tr>
