@@ -19,8 +19,8 @@ Beyond standard data querying and modification, the system allows for the submis
 - [Class Diagram](#class-diagram)
 - [Backend Services](#backend-services)
     - [Vehicule Service](#Vehicule-service)
-    - [Monitor Service](#monitor-service)
-    - [amend Service](#amend-prosumer)
+    - [Monitor Prosumer](#Monitor-Prosumer)
+    - [Amend Prosumer](#amend-prosumer)
     - [Eureka Discovery Service](#eureka-discovery-service)
     - [Gateway Service](#gateway-service)
     - [Data Generator Service](#data-generator-service)
@@ -250,7 +250,7 @@ Tests with `BloomRPC`
 
 ####
 
-### Monitor Service 
+### Monitor Prosumer 
 
 ```
 Monitor microservice responsible for managing monitors handles monitor entities defined
@@ -285,7 +285,7 @@ by their ID, maximum speed limit, and coordinates (longitude and latitude)
 │   │   │
 │   │   └───resources
 │   │       │   application.properties
-│   │       │   monitor-service.proto
+│   │       │   Monitor-Prosumer.proto
 │   │       │
 │   │       ├───static
 │   │       └───templates
@@ -298,7 +298,7 @@ by their ID, maximum speed limit, and coordinates (longitude and latitude)
 
 
 
-### Amend Service 
+### Amend Prosumer 
 
 ```
 amend microservice responsible for managing violations handles each violation, which is defined
@@ -403,7 +403,7 @@ to microservices in a distributed system, enabling dynamic and scalable routing 
 ### Data Generator Service
 ```
 A Java application that simulates a monitor system generating random speeding violations
-and sending them to the Monitor-Service.
+and sending them to the Monitor-Prosumer.
 ```
 
 - Service Structure
