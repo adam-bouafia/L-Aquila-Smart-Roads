@@ -36,6 +36,7 @@ Before running this application, you need to have the following software install
 - Java Development Kit (JDK) version 11 or later
 - Node.js version 14 or later
 - Angular CLI version 13 or later
+- Docker
 ```
 
 ### Installation
@@ -68,6 +69,7 @@ The following technologies and frameworks are used in this application:
 - Angular
 - Bootstrap
 - MySQL
+- Docker
 
 ## Functionalities
 
@@ -80,15 +82,13 @@ The application allows performing the following operations:
 
 ## Technical Architecture
 
-<img src="![Architecture](https://github.com/user-attachments/assets/f93f0b69-af53-4741-aa9a-cc6d76366021)
+![Architecture](https://github.com/user-attachments/assets/f93f0b69-af53-4741-aa9a-cc6d76366021)
 
-">
 
 ## Class Diagram 
 
-<img src="![Class Diagram](https://github.com/user-attachments/assets/48e3bd84-9ae0-4ce9-9365-5a07a27f4704)
+<![Class Diagram](https://github.com/user-attachments/assets/48e3bd84-9ae0-4ce9-9365-5a07a27f4704)
 
-" width="70%">
 
 ## Backend Services
 
